@@ -21,6 +21,14 @@
 		0919735A27A060C8009B899E /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0919735827A060C8009B899E /* Sphere.swift */; };
 		0919735B27A060C8009B899E /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0919735827A060C8009B899E /* Sphere.swift */; };
 		0919735C27A060C8009B899E /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0919735827A060C8009B899E /* Sphere.swift */; };
+		0919735E27A0650C009B899E /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0919735D27A0650C009B899E /* BoundingBox.swift */; };
+		0919735F27A0650C009B899E /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0919735D27A0650C009B899E /* BoundingBox.swift */; };
+		0919736027A0650C009B899E /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0919735D27A0650C009B899E /* BoundingBox.swift */; };
+		0919736127A0650C009B899E /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0919735D27A0650C009B899E /* BoundingBox.swift */; };
+		0919736327A07AA7009B899E /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0919736227A07AA7009B899E /* Cube.swift */; };
+		0919736427A07AA7009B899E /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0919736227A07AA7009B899E /* Cube.swift */; };
+		0919736527A07AA7009B899E /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0919736227A07AA7009B899E /* Cube.swift */; };
+		0919736627A07AA7009B899E /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0919736227A07AA7009B899E /* Cube.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +62,8 @@
 		0919734027A0607C009B899E /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		0919734227A0607C009B899E /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		0919735827A060C8009B899E /* Sphere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sphere.swift; sourceTree = "<group>"; };
+		0919735D27A0650C009B899E /* BoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
+		0919736227A07AA7009B899E /* Cube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,8 @@
 				0919731D27A0607A009B899E /* ContentView.swift */,
 				0919731E27A0607C009B899E /* Assets.xcassets */,
 				0919735827A060C8009B899E /* Sphere.swift */,
+				0919735D27A0650C009B899E /* BoundingBox.swift */,
+				0919736227A07AA7009B899E /* Cube.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -306,8 +318,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0919734627A0607C009B899E /* ContentView.swift in Sources */,
+				0919736327A07AA7009B899E /* Cube.swift in Sources */,
 				0919734427A0607C009B899E /* Homework_1App.swift in Sources */,
 				0919735927A060C8009B899E /* Sphere.swift in Sources */,
+				0919735E27A0650C009B899E /* BoundingBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,8 +330,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0919734727A0607C009B899E /* ContentView.swift in Sources */,
+				0919736427A07AA7009B899E /* Cube.swift in Sources */,
 				0919734527A0607C009B899E /* Homework_1App.swift in Sources */,
 				0919735A27A060C8009B899E /* Sphere.swift in Sources */,
+				0919735F27A0650C009B899E /* BoundingBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,8 +342,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0919733727A0607C009B899E /* Tests_iOSLaunchTests.swift in Sources */,
+				0919736527A07AA7009B899E /* Cube.swift in Sources */,
 				0919733527A0607C009B899E /* Tests_iOS.swift in Sources */,
 				0919735B27A060C8009B899E /* Sphere.swift in Sources */,
+				0919736027A0650C009B899E /* BoundingBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,8 +354,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0919734327A0607C009B899E /* Tests_macOSLaunchTests.swift in Sources */,
+				0919736627A07AA7009B899E /* Cube.swift in Sources */,
 				0919734127A0607C009B899E /* Tests_macOS.swift in Sources */,
 				0919735C27A060C8009B899E /* Sphere.swift in Sources */,
+				0919736127A0650C009B899E /* BoundingBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

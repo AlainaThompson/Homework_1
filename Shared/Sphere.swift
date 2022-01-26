@@ -10,10 +10,10 @@ import SwiftUI
 class Sphere: NSObject,ObservableObject {
 
     var radius = 0.0
-    @Published var volume = 0.0
-    @Published var surfaceArea = 0.0
-    @Published var volumeText = ""
-    @Published var surfaceAreaText = ""
+    @Published var sphereVolume = 0.0
+    @Published var sphereSurfaceArea = 0.0
+    @Published var sphereVolumeText = ""
+    @Published var sphereSurfaceAreaText = ""
     @Published var radiusString = "1.0"
     @Published var enableButton = true
     
@@ -28,8 +28,8 @@ class Sphere: NSObject,ObservableObject {
                 
         
             
-                taskGroup.addTask { let _ = await self.calculateVolume(r: self.radius)}
-                taskGroup.addTask { let _ = await self.calculateSurfaceArea(r: self.radius)}
+                taskGroup.addTask { let _ = await self.calculateSphereVolume(r: self.radius)}
+                taskGroup.addTask { let _ = await self.calculateSphereSurfaceArea(r: self.radius)}
             
         }
             
@@ -47,17 +47,17 @@ class Sphere: NSObject,ObservableObject {
     
     
     
-    func calculateVolume(r: Double) async -> Double {
+    func calculateSphereVolume(r: Double) async -> Double {
             
             //Volume = pi * (4/3) * pow(r, 3)
             
-            let calculatedVolume = Double.pi * (4/3) * pow(r, 3)
-            let newVolumeText = String(format: "%7.5f", calculatedVolume)
+            let calculatedSphereVolume = Double.pi * (4/3) * pow(r, 3)
+            let newSphereVolumeText = String(format: "%7.5f", calculatedSphereVolume)
             
-            await updateVolume(volumeTextString: newVolumeText)
-            await newVolumeValue(volumeValue: calculatedVolume)
+            await updateSphereVolume(sphereVolumeTextString: newSphereVolumeText)
+            await newSphereVolumeValue(sphereVolumeValue: calculatedSphereVolume)
             
-            return calculatedVolume
+            return calculatedSphereVolume
             
             
         }
@@ -68,18 +68,18 @@ class Sphere: NSObject,ObservableObject {
     
     
     
-    func calculateSurfaceArea(r: Double) async -> Double {
+    func calculateSphereSurfaceArea(r: Double) async -> Double {
            
            //surfaceArea = pi * 4 * pow(r, 2)
            
            
-           let calculatedSurfaceArea = pow(r, 2)*4*Double.pi
-           let newSurfaceAreaText = String(format: "%7.5f", calculatedSurfaceArea)
+           let calculatedSphereSurfaceArea = pow(r, 2)*4*Double.pi
+           let newSphereSurfaceAreaText = String(format: "%7.5f", calculatedSphereSurfaceArea)
            
-           await updateSurfaceArea(surfaceAreaTextString: newSurfaceAreaText)
-           await newSurfaceAreaValue(surfaceAreaValue: calculatedSurfaceArea)
+           await updateSphereSurfaceArea(sphereSurfaceAreaTextString: newSphereSurfaceAreaText)
+           await newSphereSurfaceAreaValue(sphereSurfaceAreaValue: calculatedSphereSurfaceArea)
            
-           return calculatedSurfaceArea
+           return calculatedSphereSurfaceArea
            
        }
     
@@ -119,37 +119,32 @@ class Sphere: NSObject,ObservableObject {
        }
        
       
-       @MainActor func updateVolume(volumeTextString: String){
+       @MainActor func updateSphereVolume(sphereVolumeTextString: String){
            
-           volumeText = volumeTextString
-           
-       }
-       
-       @MainActor func newVolumeValue(volumeValue: Double){
-           
-           self.volume = volumeValue
+           sphereVolumeText = sphereVolumeTextString
            
        }
        
-       @MainActor func newSurfaceAreaValue(surfaceAreaValue: Double){
+       @MainActor func newSphereVolumeValue(sphereVolumeValue: Double){
            
-           self.surfaceArea = surfaceAreaValue
+           self.sphereVolume = sphereVolumeValue
+           
+       }
+       
+       @MainActor func newSphereSurfaceAreaValue(sphereSurfaceAreaValue: Double){
+           
+           self.sphereSurfaceArea = sphereSurfaceAreaValue
            
        }
        
       
-       @MainActor func updateSurfaceArea(surfaceAreaTextString:String){
+       @MainActor func updateSphereSurfaceArea(sphereSurfaceAreaTextString:String){
            
-           surfaceAreaText = surfaceAreaTextString
+           sphereSurfaceAreaText = sphereSurfaceAreaTextString
            
            
        }
-    
-    
-    
-    
-    
-    
+
     
     
     
