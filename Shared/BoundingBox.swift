@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 class BoundingBox: NSObject,ObservableObject {
     
     
@@ -15,19 +16,16 @@ class BoundingBox: NSObject,ObservableObject {
     @Published var boundingBoxVolumeText = ""
     @Published var boundingBoxSurfaceAreaText = ""
     @Published var radiusString = 0.0
-    @Published var sideLengthstring = 0.0
+    @Published var sideLengthString = 0.0
     @Published var radius = 0.0
     @Published var sideLength = 0.0
+    
     @Published var boxEnableButton = true
-   
-    
-    
-    
     
     func initWithBoundingBox(l: Double, r: Double) async -> Bool {
-        sideLength = l
-        radius = r
-       
+      sideLength = l
+      radius = r
+      
         
         
             let _ = await withTaskGroup(of:  Void.self) { taskGroup in
@@ -59,7 +57,7 @@ class BoundingBox: NSObject,ObservableObject {
                print("Bounding box is too small for sphere of this radius")
             
         }
-        return sideLength
+        return sideLengthString
     }
     
     func calculateBoundingBoxSurfaceArea() async -> Double {

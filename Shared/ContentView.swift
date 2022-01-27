@@ -12,7 +12,7 @@ struct ContentView: View {
     @ObservedObject private var sphereModel = Sphere()
     @ObservedObject private var boundingBoxModel = BoundingBox()
     @State var radiusString = "1.0"
-    @State var sideLengthString = "1.0"
+    @State var sideLengthString = "2.0"
     
     var body: some View {
         

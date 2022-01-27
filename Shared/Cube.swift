@@ -9,10 +9,10 @@ import SwiftUI
 
 class Cube: NSObject,ObservableObject {
 
-    var sideLength = 1.0
+    var sideLength = 0.0
     @Published var cubevVolume = 0.0
     @Published var cubeSurfaceArea = 0.0
-    @Published var sideLengthString = "1.0"
+    @Published var sideLengthString = "2.0"
     @Published var enableButton = true
     
     
